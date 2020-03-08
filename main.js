@@ -22,7 +22,9 @@ var cors = require('cors');
 var app = express();
 
 app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
+app.engine('html', engines.mustache);
+app.set('view engine', 'html');
+
 
 app.set('port', process.env.PORT || 3000);
 
