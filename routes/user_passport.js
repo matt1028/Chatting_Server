@@ -3,18 +3,7 @@ module.exports = function(router, passport) {
     console.log('user_passport Called.');
 
     router.route('/').get(function(req, res) {
-        console.log('/ Path.');
-
-        console.log('req.users info');
-        console.dir(req.user);
-
-        if (!req.user) {
-            console.log('Not Authorized.');
-            res.render('index.ejs', {login_success:false});
-        } else {
-            console.log('Logged in');
-            res.render('index.ejs', {login_success:true});
-        }
+        res.redirect('/public/chat.html');
     });
     
     router.route('/login').get(function(req, res) {
