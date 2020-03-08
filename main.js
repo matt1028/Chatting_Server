@@ -22,7 +22,7 @@ var cors = require('cors');
 var app = express();
 
 app.set('views', __dirname + '/views');
-app.engine('html', engines.mustache);
+app.engine('html', engine.mustache);
 app.set('view engine', 'html');
 
 
