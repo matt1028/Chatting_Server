@@ -3,7 +3,7 @@ module.exports = function(router, passport) {
     console.log('user_passport Called.');
 
     router.route('/').get(function(req, res) {
-        res.render('/chat.html');
+        res.redirect('chat.html');
     });
     
     router.route('/login').get(function(req, res) {
