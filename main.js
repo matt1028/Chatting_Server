@@ -2,7 +2,7 @@ var express =  require('express')
     ,http = require('http')
     ,path = require('path');
 var bodyParser = require('body-parser')
-  , cookieParser = require('cookie-parser')
+//   , cookieParser = require('cookie-parser')
   , static = require('serve-static')
 
 var expressSession = require('express-session');
@@ -31,7 +31,7 @@ app.use(bodyParser.json());
 
 app.use('/public', static(path.join(__dirname, 'public')));
 
-app.use(cookieParser());
+// app.use(cookieParser());
 app.use(expressSession({
 	secret:'my key',
 	resave:true,
